@@ -1,2 +1,0 @@
-# assessmentinspections
-Assessment inspections.org

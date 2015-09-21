@@ -176,7 +176,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/head.jpg) no-repeat bottom center scroll;
+    background: url(../img/oneofakindbackcountry.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -286,29 +286,44 @@ a:focus {
     }
 }
 
+.content-section {
+    padding-top: 150px;
+}
 
-.contact-section {
-   align-content: center;
-    align-items: center;
-    padding: 0 0;
+.download-section {
     width: 100%;
+    padding: 50px 0;
     color: #fff;
-    background-color: #fff;
+    background: ;
+    background-color: #FFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    height: auto; 
-    padding-bottom: 25px;
+    height:750px;
 }
 
 
 @media(min-width:767px) {
-    .contact-section {
+    .content-section {
         padding-top: 100px;
     }
 
-
+    .download-section {
+        padding: 100px 0;
+    }
+.calljoe {
+    width: 100%;
+    padding: 50px 0;
+    color: #000;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 200px;
+    text-align: center;
+}
 
 }
 
@@ -425,12 +440,18 @@ i.circle
  border: none;
  padding:10px;
 }
-
-.g-recaptcha {
-    position: center;
-    object-position: center;
-}
-
-.php {
-    display: none;
+.contact-section {
+    width: 100%;
+    padding-top: 50px 0;
+    padding-right: 100px 0;
+    padding-left: 100px 0;
+    color: #fff;
+    align-content: center;
+    text-align: center;
+    background-color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height:auto;
 }
