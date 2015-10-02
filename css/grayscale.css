@@ -91,7 +91,7 @@ a:focus {
 }
 
 .navbar-custom .navbar-brand .navbar-toggle {
-    padding: 4px 6px;
+    padding: 0px 0px;
     font-size: 16px;
     color: #fff;
 }
@@ -154,7 +154,7 @@ a:focus {
 
 @media(min-width:768px) {
     .navbar-custom {
-        padding: 20px 0;
+        padding: 10px 0;
         border-bottom: 0;
         letter-spacing: 1px;
         background: 0 0;
@@ -286,6 +286,15 @@ a:focus {
     }
 }
 
+.about-section {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.price-section {
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
 
 .contact-section {
    align-content: center;
@@ -299,13 +308,16 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
     height: auto; 
-    padding-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 75px;
+    
 }
 
 
 @media(min-width:767px) {
     .contact-section {
         padding-top: 100px;
+        padding-bottom: 100px;
     }
 
 
@@ -426,9 +438,6 @@ i.circle
  padding:10px;
 }
 
-.g-recaptcha {
-    position: center;
-    object-position: center;
 }
 
 .php {

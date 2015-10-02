@@ -14,14 +14,17 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Animate.css -->
+    <link href="css/animate.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+
     <!--Capatcha-->
     <link rel="stylesheet" href="assets/vender/intl-tel-input/css/intlTelInput.css">
 
@@ -36,50 +39,44 @@
     <![endif]>
     <!-- This is needed for IE -->
     <link rel="shortcut icon" href="img/thing.ico" type="image/ico" />
-    
-    <div class="php">
-<?php
-  if (isset($_POST["submit"])) {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-        $from = 'Assessment Inspections Contact Form'; 
-        $to = 'form@assessmentinspections.org'; 
-        $subject = 'Contact Entry ';
-        
-        $body = "From: $name\n E-Mail: $email\n Message:\n $message";
- 
-        // Check if name has been entered
-        if (!$_POST['name']) {
-            $errName = 'Please enter your name';
-        }
-        
-        // Check if email has been entered and is valid
-        if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $errEmail = 'Please enter a valid email address';
-        }
-        
-        //Check if message has been entered
-        if (!$_POST['message']) {
-            $errMessage = 'Please enter your message';
-        }
-        //Check if simple anti-bot test is correct
-        if ($human !== 5) {
-            $errHuman = 'Your anti-spam is incorrect';
-        }
- 
+
+    <?php
+	if (isset($_POST["submit"])) {
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$message = $_POST['message'];
+		$human = intval($_POST['human']);
+		$from = 'Assessment Inspections Contact Request'; 
+		$to = 'form@assessmentinspections.org'; 
+		$subject = 'Assessmetninspections Contact Form ';
+		
+		$body ="From: $name\n E-Mail: $email\n Message:\n $message";
+		// Check if name has been entered
+		if (!$_POST['name']) {
+			$errName = 'Please enter your name';
+		}
+		
+		// Check if email has been entered and is valid
+		if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+			$errEmail = 'Please enter a valid email address';
+		}
+		
+		//Check if message has been entered
+		if (!$_POST['message']) {
+			$errMessage = 'Please enter your message';
+		}
+		
 // If there are no errors, send the email
 if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
-    if (mail ($to, $subject, $body, $from)) {
-        $result='<div class="alert alert-success">Thank You! We will be in touch</div>';
-    } else {
-        $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again. If problem persists, please try again later.</div>';
-    }
+	if (mail ($to, $subject, $body, $from)) {
+		$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+	} else {
+		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
+	}
 }
-    }
+	}
 ?>
-    </div>
-    
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -92,7 +89,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i> <img id="logo" src="img/logo.png" width="150px"></i>
+                    <i> <img id="logo" src="img/logo.png" width="120px"></i>
                 </a>
             </div>
 
@@ -126,10 +123,12 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Assessment Inspections</h1>
-                        <p class="intro-text">Meticulous. Unbiased. Nationally Certified.
-                            <br> We protect your home investment. <br> <br> <a type="button" class="btn btn-default btn-lg" href="tel:(720)-252-9375">(720)-252-9375</a> </p>
-                        <a href="#about" class="btn btn-circle page-scroll">
+                        <h1 class="brand-heading animated bounceInLeft">Assessment Inspections</h1>
+                        <p class="intro-text animated bounceInRight">Meticulous. Unbiased. Nationally Certified.
+                            <br> We protect your home investment.
+                            <br>
+                            <br> <a type="button" class="btn btn-default btn-lg animated fadeInLeft" href="tel:(720)-252-9375">720-252-9375</a> </p> <br>
+                        <a href="#about" class="btn btn-circle page-scroll animated fadeInLeft">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
                     </div>
@@ -140,7 +139,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 
     <!-- About Section -->
     <div class="hi">
-        <section id="about" class="container content-section text-center">
+        <section id="about" class=" about-section container content-section text-center">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <br>
@@ -152,7 +151,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                     <br>
                     <h2 style="color:#42dca3"> Meet Joseph Rocco</h1>
                 <img src="/img/joe.png" alt="Joe Rocco" width="300"> <br> <br>
-                 <p> Combining experience and technical education, Joseph Rocco has 24 years of hands-on experience coupled with formal National Certifications in Installation, Sand/Finishing, and Inspection.
+                 <p> Combining experience and technical education, Joseph Rocco has 24 years of hands-on experience coupled with formal National Certifications in Installation and Sand/Finishing.
 Many wood flooring contractors rely on outdated and inaccurate information when installing, sanding, and finishing hardwood floors.  Technical education is imperative.  The following is a detailed list of Joseph Rocco’s experience, education, achievements and awards. <br> <br>
            <div class="awards">     
 More than 20 years' experience in the hardwood flooring industry (Sanding, Finishing, Installation, and Inspection) <br> <br>
@@ -175,7 +174,7 @@ Best of Houzz: Customer Service (2014 & 2015), Design (2015) <br> <br>
 
 Editor’s Pick, 2015 Denver Life Home + Design Magazine <br> <br>
 
-    <section id="pricing" class="container pricing-section text-center">
+    <section id="pricing" class="container price-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <br> <br>
@@ -207,10 +206,9 @@ Editor’s Pick, 2015 Denver Life Home + Design Magazine <br> <br>
                                     <br>
                                     <br> After a three-to-four hour detailed inspection; Assessment Inspections will provide you with the following results within 10 business days:
                                     <br>
-                                    <br> On site conditions. (current and while the work occurred)
-                                    <br> Interviews with all parties including: the homeowner, contractor, and manufacturer (if necessary)
-                                    <br> Photography and Magnet Testing
-                                    <br> Destructive testing (Additional Cost, TBD)
+                                    <br> On site conditions. (current and while the work occurred) On-site conditions: current and while the work occurred.
+                                    <br> Interviews with all parties, including: the homeowner, contractor, and manufacturer (if necessary).
+                                    <br> Photography, magnet testing, and destructive testing (additional cost, TBD).
                                 </p>
                                 <br>
                                 <h4 style="color:#42dca3">COST: $685</h4>
@@ -228,14 +226,16 @@ Editor’s Pick, 2015 Denver Life Home + Design Magazine <br> <br>
         <br>
         <h2 style="color:#42dca3">Hire Assessment Inspections</h2>
         <div class="p1">
-            <p>You need Assessment Inspections to verify the security of your investment. Investing in hardwood flooring increases property value by more than ten percent, increases the indoor air quality for your loved ones, and helps to create a cleaner environment, when it is completed properly and according to industry standards (NWFA National Technical Standards). Improper installation can lead to longer resale timeframes and lower appraisal values. Improper installation and refinishing techniques can lead to health issues such as allergic reactions and can be detrimental to the environment. Do not allow yourself to be confused, irritated, or misled by biased individuals. As a Certified Inspector for a consultation or report so that your home investment is secured for your family, your finances, and the environment. Our Certified Inspector has 23 years of experience in installation, sanding, and finishing of all types of hardwood flooring (Pre-Finished, Engineered, Solid, and Custom Marquetry). He has accumulated more than 2,000 hours of educational instruction and is a Regional Instructor for the NWFA. He is the only contractor in Denver, CO to receive the Advanced Master Craftsman degree.</p><br> <br>
+            <p>You need Assessment Inspections to verify the security of your investment. Investing in hardwood flooring increases property value by more than ten percent, increases the indoor air quality for your loved ones, and helps to create a cleaner environment, when it is completed properly and according to industry standards (NWFA National Technical Standards). Improper installation can lead to longer resale timeframes and lower appraisal values. Improper installation and refinishing techniques can lead to health issues such as allergic reactions and can be detrimental to the environment. Do not allow yourself to be confused, irritated, or misled by biased individuals. Hire an inspector for a consultation or report so that your home investment is secured for your family, your finances, and the environment. Our Certified Inspector has 23 years of experience in installation, sanding, and finishing of all types of hardwood flooring (Pre-Finished, Engineered, Solid, and Custom Marquetry). He has accumulated more than 2,000 hours of educational instruction and is a Regional Instructor for the NWFA. He is the only contractor in Denver, CO to receive the Advanced Master Craftsman degree.</p>
+            <br>
+            <br>
         </div>
-               </section>
-                    
-                <section id="call-and-concerned" class="container call-section text-center">
-               <h2>Concerns About Your Wood Flooring:</h2>
+        </section>
 
-    <h4>
+        <section id="call-and-concerned" class="container call-section text-center">
+            <h2>Concerns About Your Wood Flooring:</h2>
+
+            <h4>
                     Popping, cracking, squeaking
                     <br><br>
                     Color variations
@@ -253,13 +253,15 @@ Editor’s Pick, 2015 Denver Life Home + Design Magazine <br> <br>
                 </h4>
 
 
-      
-        <br>
-               <i class="fa fa-phone-square fa-5x"></i>
-        <h2 style="padding-top: 10px"> Call Assessment Inspections</h2>
-               <br>
-               <a type="button" href="tel:720-252-9375" class="btn btn-default btn-lg">720-252-9375</a> <br> <br>
-        <br>
+
+            <br>
+            <i class="fa fa-phone-square fa-5x"></i>
+            <h2 style="padding-top: 10px"> Call Assessment Inspections</h2>
+            <br>
+            <a type="button" href="tel:720-252-9375" class="btn btn-default btn-lg">720-252-9375</a>
+            <br>
+            <br>
+            <br>
     </div>
 
     </div>
@@ -272,31 +274,54 @@ Editor’s Pick, 2015 Denver Life Home + Design Magazine <br> <br>
     <section id="contact" class="contact-section text-center">
         <div class="contact-section">
             <div class="container">
-                <div class="col-lg-12 col-offest-lg-2">
+                <div class="col-md-12 col-lg-12 col-sm-12">
                     <h2 style="color: #000">Fill out the Form Below </h2>
-                    <h4 style="color: #000">and we will make sure to get back to you as soon as possible </h4><br>
+                    <h4 style="color: #000">or <a href="mailto:assessmentinspections@gmail.com?subject=An email from a Customer">Email Us</a>  us directly.</h4>
+                    <br>
                     <form role="form" id="ContactForm">
-      <div class="form-group">
-        <input type="text" class="form-control" id="name" name="name" placeholder="Name - First and Last">
-        <span class="help-block" style="display: none;">Please enter your name.</span>
-      </div>
-      <div class="form-group">
-        <input type="email" class="form-control" id="email" name="email" placeholder="Email Address - example@example.com">
-        <span class="help-block" style="display: none;">Please enter a valid e-mail address.</span>
-      </div>
-      <div class="form-group">
-        <textarea rows="10" cols="100" class="form-control" id="message" name="message" placeholder="Message"></textarea>
-        <span class="help-block" style="display: none;">Please enter a message.</span>
-      </div>
-                        
-      <div class="g-recaptcha" data-sitekey="6LdfNQ0TAAAAACfd8Ioed5Sho--44geGjIdH7WhD"></div>
-              <span class="help-block"style="display: none;">Are you a robot? Let's find out...</span>
-            </div>
-            <span class="help-block" style="display: none;">Please enter a the security code.</span>
-            <button type="submit" style="position:center;" id="submit" class="btn btn-primary btn-md" data-loading-text="Sending..." style="display: block; margin-top: 10px;">Send</button>
-    </form>
+                        <form class="form-horizontal" role="form" method="post" action="index.php">
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label">Name</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+                                    <?php echo "<p class='text-danger'>$errName</p>";?>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-2 control-label">Email</label>
+                                <div class="col-md-12">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+                                    <?php echo "<p class='text-danger'>$errEmail</p>";?>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="col-sm-2 control-label">Message</label>
+                                <div class="col-md-12">
+                                    <textarea class="form-control" rows="4" name="message">
+                                        <?php echo htmlspecialchars($_POST['message']);?>
+                                    </textarea>
+                                    <?php echo "<p class='text-danger'>$errMessage</p>";?>
+                                </div>
+                            </div>
+                            <div class="g-recaptcha col-md-12" data-sitekey="6LdfNQ0TAAAAACfd8Ioed5Sho--44geGjIdH7WhD"></div>
+                            <span class="help-block" style="display: none;">Are you a robot? Let's find out...</span>
                 </div>
+                <span class="help-block" style="display: none;">Please enter a the security code.</span>
+                <br>
+                <br>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <?php echo $result; ?>
+                    </div>
+                </div>
+                </form>
             </div>
+        </div>
         </div>
     </section>
 
@@ -327,14 +352,14 @@ Editor’s Pick, 2015 Denver Life Home + Design Magazine <br> <br>
         <script src="js/jquery.easing.min.js"></script>
 
         <!-- Google RECaptacha and other contact form things -->
-            <script src="assets/vender/intl-tel-input/js/intlTelInput.min.js"></script>
-    <script src="assets/js/contact-form.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+        <script src="assets/vender/intl-tel-input/js/intlTelInput.min.js"></script>
+        <script src="assets/js/contact-form.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
         <!-- Custom Theme JavaScript -->
         <script src="js/grayscale.js"></script>
-         <!--Form JS -->
+        <!--Form JS -->
         <script src="js/form.js"></script>
 
 </body>

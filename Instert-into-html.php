@@ -238,3 +238,32 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
     header('HTTP/1.1 500 Internal Server Error');
     echo json_encode(array('message' => 'Unexpected error while attempting to send e-mail.'));
   }
+                    
+                    
+                    
+                    
+ ------------------------------------------------------------------------------------------------------------------------------
+                    
+                    
+                    Old form with Google Captcha
+                    
+                    <form role="form" id="ContactForm">
+      <div class="form-group">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Name - First and Last">
+        <span class="help-block" style="display: none;">Please enter your name.</span>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email Address - example@example.com">
+        <span class="help-block" style="display: none;">Please enter a valid e-mail address.</span>
+      </div>
+      <div class="form-group">
+        <textarea rows="10" cols="100" class="form-control" id="message" name="message" placeholder="Message"></textarea>
+        <span class="help-block" style="display: none;">Please enter a message.</span>
+      </div>
+                        
+      <div class="g-recaptcha" data-sitekey="6LdfNQ0TAAAAACfd8Ioed5Sho--44geGjIdH7WhD"></div>
+              <span class="help-block"style="display: none;">Are you a robot? Let's find out...</span>
+            </div>
+            <span class="help-block" style="display: none;">Please enter a the security code.</span>
+            <button type="submit" style="position:center;" id="submit" class="btn btn-primary btn-md" data-loading-text="Sending..." style="display: block; margin-top: 10px;">Send</button>
+    </form>
