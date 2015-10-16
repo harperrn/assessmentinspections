@@ -158,13 +158,13 @@ More than 20 years' experience in the hardwood flooring industry (Sanding, Finis
 
 Owner and Lead Technician for nine years - Denver's only Nationally Certified Advanced Master Craftsman, Artistic Floors by Design <br> <br>
 
-National Wood Flooring Association Certified Professional: Installation, Sand/Finish, and Inspection <br> <br>
+National Wood Flooring Association Certified Professional: Installation and Sand/Finish <br> <br>
                
 National Wood Flooring Association Degrees Earned: Vanguard, Craftsman, Master Craftsman, and Advanced Master Craftsman <br> <br>
                
 National Wood Flooring Association Regional Technical Trainer <br> <br>
                
-National Wood Flooring Board of Directors (2010-2015) <br> <br>
+National Wood Flooring Association Board of Directors (2010-2015) <br> <br>
                
 Wood Floor of the Year Award Winner (2012, NWFA Designer Choice) <br> <br>
             
@@ -206,7 +206,7 @@ Editor’s Pick, 2015 Denver Life Home + Design Magazine <br> <br>
                                     <br>
                                     <br> After a three-to-four hour detailed inspection; Assessment Inspections will provide you with the following results within 10 business days:
                                     <br>
-                                    <br> On site conditions. (current and while the work occurred) On-site conditions: current and while the work occurred.
+                                    <br> On-site conditions: current and while the work occurred.
                                     <br> Interviews with all parties, including: the homeowner, contractor, and manufacturer (if necessary).
                                     <br> Photography, magnet testing, and destructive testing (additional cost, TBD).
                                 </p>
@@ -226,7 +226,7 @@ Editor’s Pick, 2015 Denver Life Home + Design Magazine <br> <br>
         <br>
         <h2 style="color:#42dca3">Hire Assessment Inspections</h2>
         <div class="p1">
-            <p>You need Assessment Inspections to verify the security of your investment. Investing in hardwood flooring increases property value by more than ten percent, increases the indoor air quality for your loved ones, and helps to create a cleaner environment, when it is completed properly and according to industry standards (NWFA National Technical Standards). Improper installation can lead to longer resale timeframes and lower appraisal values. Improper installation and refinishing techniques can lead to health issues such as allergic reactions and can be detrimental to the environment. Do not allow yourself to be confused, irritated, or misled by biased individuals. Hire an inspector for a consultation or report so that your home investment is secured for your family, your finances, and the environment. Our Certified Inspector has 23 years of experience in installation, sanding, and finishing of all types of hardwood flooring (Pre-Finished, Engineered, Solid, and Custom Marquetry). He has accumulated more than 2,000 hours of educational instruction and is a Regional Instructor for the NWFA. He is the only contractor in Denver, CO to receive the Advanced Master Craftsman degree.</p>
+            <p>You need Assessment Inspections to verify the security of your investment. Investing in hardwood flooring increases property value by more than ten percent, increases the indoor air quality for your loved ones, and helps to create a cleaner environment, when it is completed properly and according to industry standards (NWFA National Technical Standards). Improper installation can lead to longer resale timeframes and lower appraisal values. Improper installation and refinishing techniques can lead to health issues such as allergic reactions and can be detrimental to the environment. Do not allow yourself to be confused, irritated, or misled by biased individuals. Hire an inspector for a consultation or report so that your home investment is secured for your family, your finances, and the environment. Our Certified Inspector has 24 years of experience in installation, sanding, and finishing of all types of hardwood flooring (Pre-Finished, Engineered, Solid, and Custom Marquetry). He has accumulated more than 2,000 hours of educational instruction and is a Regional Instructor for the NWFA. He is the only contractor in Denver, Colorado to receive the National Wood Flooring Association’s Advanced Master Craftsman degree.</p>
             <br>
             <br>
         </div>
